@@ -4,10 +4,8 @@
  */
 package ex35;
 
-import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Locale;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class App
@@ -16,13 +14,13 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> contestants = new ArrayList<String>();
+        ArrayList<String> contestants = new ArrayList<>();
 
         boolean inputting = true;
         while (inputting) {
             System.out.print("Enter a name: ");
             String input = scanner.nextLine();
-            if (input == "") {
+            if (Objects.equals(input, "")) {
                 inputting = false;
             } else {
                 contestants.add(input);

@@ -19,7 +19,7 @@ public class App
             System.out.print("\nEnter the difficulty level(1, 2, or 3): ");
             int diff = scanner.nextInt();
 
-            int number = 0;
+            int number;
             if (diff == 1) {
                 number = (int) Math.ceil(Math.random() * 10);
             } else if (diff == 2) {

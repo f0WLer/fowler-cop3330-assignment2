@@ -13,7 +13,7 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        ArrayList<Integer> numbers = new ArrayList<>();
 
         boolean inputting = true;
         while (inputting) {
@@ -27,10 +27,8 @@ public class App
             int parsed;
             try {
                 parsed = Integer.parseInt(input);
-                numbers.add(new Integer(parsed));
-            } catch (final NumberFormatException e) {
-
-            }
+                numbers.add(parsed);
+            } catch (final NumberFormatException ignored) {}
         }
 
         System.out.print("Numbers: ");
@@ -53,10 +51,10 @@ public class App
     private static double average(ArrayList<Integer> numbers)
     {
         int sum = 0;
-        for (int i = 0; i < numbers.size(); i++) {
-            sum += numbers.get(i);
+        for (Integer number : numbers) {
+            sum += number;
         }
-        return sum / numbers.size();
+        return (double) sum / numbers.size();
     }
 
     private static int min(ArrayList<Integer> numbers)
@@ -86,8 +84,7 @@ public class App
         double mean = average(numbers);
 
         double sum = 0.0;
-        for (int i = 0; i < numbers.size(); i++) {
-            int value = numbers.get(i);
+        for (int value : numbers) {
             value -= mean;
             value *= value;
             sum += value;

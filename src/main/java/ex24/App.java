@@ -27,8 +27,8 @@ public class App
             return false;
         }
 
-        char array1[] = word1.toLowerCase(Locale.ROOT).toCharArray();
-        char array2[] = word2.toLowerCase(Locale.ROOT).toCharArray();
+        char[] array1 = word1.toLowerCase(Locale.ROOT).toCharArray();
+        char[] array2 = word2.toLowerCase(Locale.ROOT).toCharArray();
         Arrays.sort(array1);
         Arrays.sort(array2);
 

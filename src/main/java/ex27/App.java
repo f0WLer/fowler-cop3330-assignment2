@@ -26,8 +26,7 @@ public class App
 
     private static void validateInput(String first, String last, String zip, String id)
     {
-        boolean errorFree = true;
-        if (!checkFirst(first)) { errorFree = false; }
+        boolean errorFree = checkFirst(first);
         if (!checkLast(last)) { errorFree = false; }
         if (!checkZip(zip)) { errorFree = false; }
         if (!checkId(id)) { errorFree = false; }
