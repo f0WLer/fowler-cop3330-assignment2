@@ -21,7 +21,7 @@ public class App
         System.out.printf("%s and %s %s anagrams.%n", string1, string2, yes_or_no);
     }
 
-    private static boolean isAnagram(String word1, String word2)
+    public static boolean isAnagram(String word1, String word2)
     {
         if (word1.length() != word2.length()) {
             return false;

@@ -32,7 +32,7 @@ public class App
         System.out.printf("The password '%s' is a %s password.%n", password, strength);
     }
 
-    private static int passwordValidator(String password)
+    public static int passwordValidator(String password)
     {
         char[] passArray = password.toCharArray();
 

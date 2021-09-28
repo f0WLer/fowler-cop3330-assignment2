@@ -24,7 +24,7 @@ public class App
         validateInput(first, last, zip, id);
     }
 
-    private static void validateInput(String first, String last, String zip, String id)
+    public static void validateInput(String first, String last, String zip, String id)
     {
         boolean errorFree = checkFirst(first);
         if (!checkLast(last)) { errorFree = false; }
@@ -34,7 +34,7 @@ public class App
         if (errorFree) { System.out.println("There were no errors found"); }
     }
 
-    private static boolean checkFirst(String first)
+    public static boolean checkFirst(String first)
     {
         if (first.length() == 0) {
             System.out.println("The first name must be filled in.");
@@ -48,7 +48,7 @@ public class App
         return true;
     }
 
-    private static boolean checkLast(String last)
+    public static boolean checkLast(String last)
     {
         if (last.length() == 0) {
             System.out.println("The last name must be filled in.");
@@ -62,7 +62,7 @@ public class App
         return true;
     }
 
-    private static boolean checkZip(String zip)
+    public static boolean checkZip(String zip)
     {
         if (zip.length() < 5) {
             System.out.println("The zip code must be a 5 digit number.");
@@ -78,7 +78,7 @@ public class App
         return true;
     }
 
-    private static boolean checkId(String id)
+    public static boolean checkId(String id)
     {
         char[] chars = id.toCharArray();
 
