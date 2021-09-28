@@ -2,8 +2,11 @@ package ex26;
 
 public class PaymentCalculator
 {
-    public static double calculateMonthsUntilPaidOff(int b, int i, int p)
+    public static int calculateMonthsUntilPaidOff(int b, int apr, int p)
     {
-        return -(1/30) * Math.log(1 + b/p * (1 - (1 + i)^30)) / Math.log(1 + i);
+        double i = (double) apr / 365.0;
+        double calc = (-1.0/30.0) * Math.log(1.0 + (double) b/p * (1.0 - Math.pow(1.0 + i, 30)) / Math.log(1.0 + i));
+        System.out.println(calc);
+        return (int) calc;
     }
 }

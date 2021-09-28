@@ -13,9 +13,18 @@ public class App
         int r = 0;
         while (r < 1) {
             System.out.print("What is the rate of return? ");
-            int input = Integer.parseInt(scanner.nextLine());
-            if (input < 1) {
-                System.out.println("Sorry, that's not a valid input.");
+            String input = scanner.nextLine();
+
+            int parsed;
+            try {
+                parsed = Integer.parseInt(input);
+                if (parsed < 1) {
+                    System.out.println("Sorry, that is not a valid input.");
+                } else {
+                    r = parsed;
+                }
+            } catch (final NumberFormatException e) {
+                System.out.println("Sorry, that is not a valid input.");
             }
         }
         int years = 72 / r;

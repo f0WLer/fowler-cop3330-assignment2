@@ -9,16 +9,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        int b, i, p;
+        int b, apr, p;
         Scanner scanner = new Scanner(System.in);
         System.out.print("What is your balance? ");
-        b = Integer.parseInt(scanner.nextLine());
+        b = scanner.nextInt();
         System.out.print("What is the APR on the card (as a percent)? ");
-        i = Integer.parseInt(scanner.nextLine()) / 365;
+        apr = scanner.nextInt();
         System.out.print("What is the monthly payment you can make? ");
-        p = Integer.parseInt(scanner.nextLine());
+        p = scanner.nextInt();
 
-        double months_left = PaymentCalculator.calculateMonthsUntilPaidOff(b, i, p);
+        int months_left = PaymentCalculator.calculateMonthsUntilPaidOff(b, apr, p);
 
         System.out.println("It will take you " + months_left + " months to pay off this card.");
     }
